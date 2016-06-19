@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Module2.Views.Vendeurs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <DataGrid ItemsSource="{Binding LstVendeur}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=NO_VENDEUR}" Header="num vendeur" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=vendeur2.NOM_VEND}" Header="chef" IsReadOnly="True"/>
+                <DataGridTextColumn  Binding="{Binding Path=NOM_VEND}" Header="nom " IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=PRENOM_VEND}" Header="prenom" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=DATE_ENBAU}" Header="date embauche" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=VILLE_VEND}" Header="ville" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=SALAIRE_VEND}" Header="salaire" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=COMMISSION}" Header="commission" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>  
+    </Grid>
+</UserControl>

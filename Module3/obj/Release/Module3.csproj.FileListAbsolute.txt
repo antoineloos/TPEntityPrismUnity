@@ -1,0 +1,16 @@
+C:\Users\Epulapp\Desktop\PrismUnity\PrismUnity\bin\Release\Modules\Module3\Module3.dll.config
+C:\Users\Epulapp\Desktop\PrismUnity\PrismUnity\bin\Release\Modules\Module3\Module3.dll
+C:\Users\Epulapp\Desktop\PrismUnity\PrismUnity\bin\Release\Modules\Module3\Module3.pdb
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Module3.csprojResolveAssemblyReference.cache
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\Prix.baml
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\Prix.g.cs
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Module3_MarkupCompile.cache
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Module3.g.resources
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Module3.dll
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Module3.pdb
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\AjoutCommande.baml
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\AjoutCommande.g.cs
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\NavPrix.baml
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\NavPrix.g.cs
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\NavCommande.baml
+C:\Users\Epulapp\Desktop\PrismUnity\Module3\obj\Release\Views\NavCommande.g.cs

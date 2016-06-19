@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="ModuleOne.Views.FicheVendeur"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mat="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <mat:Card Height="600" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <Label Content="Fiche Vendeur" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Margin="20" />
+
+                <StackPanel Orientation="Horizontal" Margin="60" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Vendeur : " HorizontalAlignment="Right" FontSize="25" Height="40" Margin="0,0,0,20"/>
+                        <Label Content="Num Vendeur :" HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Nom : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Prénom : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Responsable :" HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Date Embauche : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Ville : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Salaire : " HorizontalAlignment="Right" FontSize="20" Height="40" />
+                        <Label Content="Commission : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Button Content="Suprimer" Margin="20" FontSize="18" HorizontalAlignment="Right" Command="{Binding SuprCommand}" IsEnabled="{Binding IsSelected}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <ComboBox Width="200" Height="40"  FontSize="20" ItemsSource="{Binding LstVendeur, Mode=TwoWay}" DisplayMemberPath="NOM_VEND" SelectedValuePath="NO_VENDEUR" SelectedItem="{Binding SelectedVd,Mode=TwoWay}" Margin="0,0,0,20" >
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="DropDownClosed">
+                                    <prism:InvokeCommandAction Command="{Binding SelectCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedVd.NO_VENDEUR, Mode=TwoWay}" IsEnabled="False"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedVd.NOM_VEND, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedVd.PRENOM_VEND, Mode=TwoWay}"/>
+                        <ComboBox Width="200" Height="40" FontSize="20" ItemsSource="{Binding LstVendeur, Mode=TwoWay}" DisplayMemberPath="NOM_VEND" SelectedValuePath="NO_VENDEUR" SelectedItem="{Binding Path=DataContext.SelectedVd.vendeur2, RelativeSource={RelativeSource AncestorType={x:Type UserControl}},Mode=TwoWay}" SelectedValue="{Binding Path=NO_VEND_CHEF_EQ}"/>
+                        <!--<TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedVd.DATE_EMBAU, Mode=TwoWay}"/>-->
+                        <DatePicker SelectedDate="{Binding Path=SelectedVd.DATE_EMBAU, Mode=TwoWay}" Width="200" Height="40" FontSize="20"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedVd.VILLE_VEND, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedVd.SALAIRE_VEND, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedVd.COMMISSION, Mode=TwoWay}"/>
+                        <Button Content="Valider" Margin="20" FontSize="18" HorizontalAlignment="Right" Command="{Binding UpdateCommand}" IsEnabled="{Binding IsSelected}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+
+        </mat:Card>
+    </Grid>
+</UserControl>

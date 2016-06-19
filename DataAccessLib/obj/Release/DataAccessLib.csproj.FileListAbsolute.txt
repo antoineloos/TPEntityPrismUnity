@@ -1,0 +1,13 @@
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\DataAccessLib.dll.config
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\DataAccessLib.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\DataAccessLib.pdb
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\EntityFramework.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\MySql.Data.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\EntityFramework.xml
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\fr\EntityFramework.resources.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\obj\Release\DataAccessLib.dll
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\obj\Release\DataAccessLib.pdb

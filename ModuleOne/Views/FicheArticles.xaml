@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="ModuleOne.Views.FicheArticles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mat="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <mat:Card Height="600" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <Label Content="Fiche Article" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Margin="20" />
+
+                <StackPanel Orientation="Horizontal" Margin="60" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Article : " HorizontalAlignment="Right" FontSize="25" Height="40" Margin="0,0,0,20"/>
+                        <Label Content="Num Article :" HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Libele : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Quantité : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Ville : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Prix : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Interrompu : " HorizontalAlignment="Right" FontSize="20" Height="40" />
+                        <Button Content="Suprimer" Margin="20" FontSize="18" HorizontalAlignment="Right" Command="{Binding SuprCommand}" IsEnabled="{Binding IsSelected}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <ComboBox Width="200" Height="40" FontSize="20" ItemsSource="{Binding LstArticles, Mode=TwoWay}" DisplayMemberPath="LIB_ARTICLE" SelectedValuePath="LIB_ARTICLE" SelectedItem="{Binding SelectedArt,Mode=TwoWay}" Margin="0,0,0,20" >
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="DropDownClosed">
+                                    <prism:InvokeCommandAction Command="{Binding SelectCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedArt.NO_ARTICLE, Mode=TwoWay}" IsEnabled="False"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedArt.LIB_ARTICLE, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedArt.QTE_DISPO, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedArt.VILLE_ART, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedArt.PRIX_ART, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedArt.INTERROMPU, Mode=TwoWay}"/>
+                       
+                        <Button Content="Valider" Margin="20" FontSize="18" HorizontalAlignment="Right" Command="{Binding UpdateCommand}" IsEnabled="{Binding IsSelected}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+
+        </mat:Card>
+    </Grid>
+</UserControl>

@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="ModuleOne.Views.FicheClient"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mat="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <mat:Card Height="600" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <Label Content="Fiche Client" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="30" Margin="20" />
+                
+                <StackPanel Orientation="Horizontal" Margin="60" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Client : " HorizontalAlignment="Right" FontSize="25" Height="40" Margin="0,0,0,20"/>
+                        <Label Content="Num Client :" HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Nom : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Prénom : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Société : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Adresse : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Label Content="Ville : " HorizontalAlignment="Right" FontSize="20" Height="40" />
+                        <Label Content="Code postal : " HorizontalAlignment="Right" FontSize="20" Height="40"/>
+                        <Button Content="Suprimer" Margin="20" FontSize="18" HorizontalAlignment="Right" Command="{Binding SuprCommand}" IsEnabled="{Binding IsSelected}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <ComboBox Width="200" Height="40" FontSize="20" ItemsSource="{Binding LstClient, Mode=TwoWay}" DisplayMemberPath="NOM_CL" SelectedValuePath="NOM_CL" SelectedItem="{Binding SelectedClt,Mode=TwoWay}" Margin="0,0,0,20" >
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="DropDownClosed">
+                                    <prism:InvokeCommandAction Command="{Binding SelectCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedClt.NO_CLIENT, Mode=TwoWay}" IsEnabled="False"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedClt.NOM_CL, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedClt.PRENOM_CL, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedClt.SOCIETE, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedClt.ADRESSE_CL, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedClt.VILLE_CL, Mode=TwoWay}"/>
+                        <TextBox Width="200" Height="40" FontSize="20" Text="{Binding Path=SelectedClt.CODE_POST_CL, Mode=TwoWay}"/>
+                        <Button Content="Valider" Margin="20" FontSize="18" HorizontalAlignment="Right" Command="{Binding UpdateCommand}" IsEnabled="{Binding IsSelected}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+            
+        </mat:Card>
+    </Grid>
+</UserControl>

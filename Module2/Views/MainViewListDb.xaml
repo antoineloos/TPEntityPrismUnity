@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Module2.Views.MainViewListDb"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:local="clr-namespace:Module2.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/MaterialDesign.xaml" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Resources>
+            <Style BasedOn="{StaticResource MaterialDesignTabablzControlStyle}" TargetType="{x:Type dragablz:TabablzControl}" />
+        </Grid.Resources>
+        <dragablz:TabablzControl x:Name="MainTabControl" >
+            <dragablz:TabablzControl.InterTabController>
+                <dragablz:InterTabController InterTabClient="{Binding TabClient}" />
+            </dragablz:TabablzControl.InterTabController>
+            <TabItem Header="Client" IsSelected="True">
+                <local:Clients/>
+            </TabItem>
+            <TabItem Header="Vendeur" IsSelected="True">
+                <local:Vendeurs/>
+            </TabItem>
+            <TabItem Header="Articles" >
+                <local:Articles/>
+            </TabItem>
+            <TabItem Header="Commandes" >
+                <local:Commandes/>
+            </TabItem>
+        </dragablz:TabablzControl>    
+    </Grid>
+</UserControl>

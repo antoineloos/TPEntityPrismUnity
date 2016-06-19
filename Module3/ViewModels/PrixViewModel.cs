@@ -33,8 +33,16 @@ namespace Module3.ViewModelModels
 
         private void ValidFunc()
         {
-            double? tmp = double.Parse(LbPourcentage.Substring(0,LbPourcentage.Length-1));
-           MessageBox.Show("le prix de vos produit vient d'être modifier de : " +ctx.articles_augm_prix(tmp).ToString() + "le probkème vient de la procédure stockée");
+            if (IsNegatif)
+            {
+                double? tmp = 0.1*double.Parse(LbPourcentage.Substring(1, LbPourcentage.Length - 1));
+            }
+            else
+            {
+                double? tmp = 1+0.1 * double.Parse(LbPourcentage.Substring(0, LbPourcentage.Length - 1));
+            }
+            
+           MessageBox.Show("le prix de vos produit vient d'être modifier");
         }
 
         private void ToggleIsNeg()

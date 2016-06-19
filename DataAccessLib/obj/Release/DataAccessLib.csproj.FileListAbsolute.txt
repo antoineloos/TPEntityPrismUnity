@@ -11,3 +11,4 @@ C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\fr\EntityFramework
 C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\bin\Release\fr\EntityFramework.SqlServer.resources.dll
 C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\obj\Release\DataAccessLib.dll
 C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\obj\Release\DataAccessLib.pdb
+C:\Users\Epulapp\Desktop\PrismUnity\DataAccessLib\obj\Release\DataAccessLib.csprojResolveAssemblyReference.cache

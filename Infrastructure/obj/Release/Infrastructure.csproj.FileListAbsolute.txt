@@ -33,3 +33,4 @@ C:\Users\Epulapp\Desktop\PrismUnity\Infrastructure\bin\Release\zh-Hans\System.Wi
 C:\Users\Epulapp\Desktop\PrismUnity\Infrastructure\bin\Release\zh-Hant\System.Windows.Interactivity.resources.dll
 C:\Users\Epulapp\Desktop\PrismUnity\Infrastructure\obj\Release\Infrastructure.dll
 C:\Users\Epulapp\Desktop\PrismUnity\Infrastructure\obj\Release\Infrastructure.pdb
+C:\Users\Epulapp\Desktop\PrismUnity\Infrastructure\obj\Release\Infrastructure.csprojResolveAssemblyReference.cache
